@@ -1,0 +1,73 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #33d3a3;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Bungee', cursive;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  
+  .display-container {
+    display: flex;
+    flex-direction: column;
+    height: 100Spx;
+
+    
+  }
+
+  .middle-container {
+    padding: auto;
+    display: flex;
+    margin-inline-start: auto;
+    flex-direction: column;
+    height: 20px;
+    box-sizing: border-box;
+  }
+ 
+
+  .submit2 {
+    height: 100px;
+    width: 100%;
+  }
+
+
+  .title-text {
+    height: 50px;
+    width: 100%;
+    font-family: 'Bungee', cursive;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 20 auto;
+    border-bottom: solid 3px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  #text {
+    width: 95px;
+    height: 70px;
+    position: absolute;
+    top: 36px;
+    left: calc(50vw + 90px);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    z-index: 2;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .button {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 466px) {
+    .title-text {
+        content: 'PCC'
+    }
+  }
