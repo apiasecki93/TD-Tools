@@ -1,73 +1,90 @@
 body {
-    font-family: 'Work Sans', sans-serif;
-    background-color: #33d3a3;
-    box-sizing: border-box;
-    display: flex;
-    font-family: 'Bungee', cursive;
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
+  font-family: 'Work Sans', sans-serif;
+  background-color: #33d3a3;
+  font-family: 'Bungee', cursive;
+  text-transform: uppercase;
+}
 
+.display-container {
+  display: flex;
+  width: 100%;
+  display: inline-block;
+  border-bottom: solid 5px black;
+}
+
+ #wraperVion {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  padding: 3px;
+  display:block;
+  float: left;
+}
+
+#vion {
+  background:  url(vion-logo.png);
+  background-color: #33d3a3;
+  background-blend-mode: darken;
+  padding-right: 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
   
-  .display-container {
-    display: flex;
-    flex-direction: column;
-    height: 100Spx;
+}
+#wraperICT {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  padding: 3px;
+  display:block;
+  float: right;
+}
 
-    
-  }
+#ict {
+  background:  url(ICT-logo.jpg);
+  background-color: #33d3a3;
+  background-blend-mode: darken;
+  padding-right: 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-size: contain;
+}
 
-  .middle-container {
-    padding: auto;
-    display: flex;
-    margin-inline-start: auto;
-    flex-direction: column;
-    height: 20px;
-    box-sizing: border-box;
-  }
- 
+#title-text {
+  border: 1px solid red;
+  display: inline;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-inline-start: 20%;
+  font-size: 3rem;
+}
 
-  .submit2 {
-    height: 100px;
-    width: 100%;
-  }
+.dis1 {
+  padding: 1rem;
+}
+
+.dis2 {
+  padding: 1rem;
+}
+
+.dis3 {
+  padding: 1rem;
+}
+
+ .pingForm {
+  display: none;
+}
+
+.pingButton {
+  display: none;
+}
 
 
+
+@media screen and (max-width: 466px) {
   .title-text {
-    height: 50px;
-    width: 100%;
-    font-family: 'Bungee', cursive;
-    text-transform: uppercase;
-    font-size: 50px;
-    margin: 20 auto;
-    border-bottom: solid 3px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
+      content: 'PCC'
   }
-
-  #text {
-    width: 95px;
-    height: 70px;
-    position: absolute;
-    top: 36px;
-    left: calc(50vw + 90px);
-    font-family: 'Work Sans', sans-serif;
-    font-size: 12px;
-    z-index: 2;
-    word-wrap: break-word;
-    text-align: center;
-  }
-
-  .button {
-    cursor: pointer;
-  }
-
-  @media screen and (max-width: 466px) {
-    .title-text {
-        content: 'PCC'
-    }
-  }
+}

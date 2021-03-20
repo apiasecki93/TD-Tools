@@ -11,7 +11,6 @@ function calculation(){
     var speed = parseInt(document.getElementById('speedField').value);
     if (speed && typeof(speed) === 'number' && (speed.toString().length >= 3 && speed.toString().length <=4)) { //
          let wynik = ((speed * 80) / 3600)
-         console.log(result)
          wynik = wynik.toFixed(0)
          answer = {
             result: `The pulse shoud be set to ${wynik} `

@@ -35,8 +35,8 @@ let listConv = [
 ]
 
 disHid = {
-    displayList: 'displayList',
-    hideList: 'hideList'
+    displayList: 'Display conveyor List',
+    hideList: 'Hide conveyor List'
 }
 $('#but').text(disHid.displayList)
 function myFunction() {

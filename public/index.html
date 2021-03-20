@@ -1,26 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pulse counter</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee|Work+Sans:400,700" rel="stylesheet">
 </head>
 <body>
-    <div class="display-container">
-        <div class="title-text">Pulse Counter Calculator</div>
+    <section class="display-container">
+        <div id="wraperVion">
+            <div id="vion"></div>
+        </div>
+        <div id="title-text">Pulse Counter Calculator</div>
+        <div id="wraperICT">
+            <div id="ict"></div>
+        </div>
+    </section>
+    <section class="dis1">
         <div id="displayBox">    
-            <div id="display_info"></div>
-            <div id="display_info2"></div>
+        <div id="display_info"></div>
+        <div id="display_info2"></div>
 
-            <input name="speedFieldInput" type="text" maxlength="600" id="speedField" class="speedField" placeholder="enter a three/four numbers"/>
-            <input type="submit" name="speedFieldInput" value="calulate" id="submit">
-            <div id="result"></div>
+        <input name="speedFieldInput" type="text" maxlength="600" id="speedField" class="speedField" placeholder="enter a three/four numbers"/>
+        <input type="submit" name="speedFieldInput" value="calulate" id="submit">
+        <div id="result"></div>
         </div>     
-    </div>
-    <div class="middle-container">
+    </section>
+    <section class="dis2">
         <div class="Speed of conveyour's transport" id="mi-co-Speed"></div>
         <button onclick="myFunction()" id="but"></button>
             <ol id="uul"></ol>
-        </div>
+    </section>
+    <section class="dis3">
+        <div class="PingToolContainer"></div>
+            <input type ="button" class="button-show-ping" id="submit2" value="Show Ping tool">
+                <form class="pingForm">
+                    <input name="ipFieldInput1"  id="ipField1" class="ipField" placeholder="" inputmode="numeric" pattern="[0-9]" minlength="2" maxlength="3"/>
+                    <input name="ipFieldInput2"  id="ipField2" class="ipField" placeholder="" inputmode="numeric" pattern="[0-9]" minlength="2" maxlength="3"/>
+                    <input name="ipFieldInput3"  id="ipField3" class="ipField" placeholder="" inputmode="numeric" pattern="[0-9]" minlength="2" maxlength="3"/>
+                    <input name="ipFieldInput4"  id="ipField4" class="ipField" placeholder="" inputmode="numeric" pattern="[0-9]" minlength="2" maxlength="3"/>
+                </form>
+                <button onclick="pingHost" class="pingButton" id="ping" ></button>
+                <div id="afterPingHpst"></div>
+    </section>
     </div>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -28,5 +50,6 @@
   crossorigin="anonymous"></script>
 <script src="js/script.js"></script> 
 <script src="js/script2.js"></script> 
+<script src="js/script3.js"></script>
 </body>
 </html>

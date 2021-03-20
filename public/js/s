@@ -1,0 +1,206 @@
+const devices = [
+    host1 = {
+        name: 'deboning tools',
+        ip: '10.52.125.8'
+    },
+    host2 = {
+        name: 'google',
+        ip: 'google.com'
+    }
+];
+
+devices.forEach(function(host) {
+    host[1].forEach(function(ip) {
+        ping.sys.probe(ip, function(isAlive) {
+            let msg = isAlive ? 'host ' + host + 'is alive' : 'host ' + host + 'is dead';
+            console.log(msg)
+    });
+});
+
+
+//import ping from 'ping'
+let disHid;
+var hosts = ['192.168.1.1', 'google.com', 'yahoo.com'];
+
+for(let host of hosts){
+    let res = await ping.promise.probe(host);
+    console.log(res);
+}
+
+
+
+
+
+
+
+disHid = {
+    dis: 'Show Ping status',
+    hid: 'Hide Ping status'
+}
+
+$('#but2').text(disHid.dis)
+function myFunction2() {
+    let x = document.getElementById("uul2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        $('#but2').text(disHid.hid)
+    } else {
+        x.style.display = "none";
+        $('#but2').text(disHid.dis)
+    }
+}
+
+
+$(document).ready(function(){ 
+    $('#uul2').hide();
+    function makeUl(array) {
+        let list = document.getElementById('uul');
+        for (let i = 0; i < array.length; i++) {
+            let item = document.createElement('li');
+            item.appendChild(document.createTextMode())
+        }
+    }
+})
+
+
+
+
+
+
+
+
+
+=================================
+let showHid = {
+    showPing: 'Show Ping tool',
+    hidePing: 'Hide Ping tool'
+}
+
+let showing;
+let subToShow;
+function collectIp(){
+    let ip;
+    let a,b,c,d;
+    let ip1 = parseInt(document.getElementById('ipField1').value);
+    let ip2 = parseInt(document.getElementById('ipField2').value);
+    let ip3 = parseInt(document.getElementById('ipField3').value);
+    let ip4 = parseInt(document.getElementById('ipField4').value);
+    if (ip1.toString().length>= 2 ) {
+        a = true;
+    } else {
+        a = false;
+    }
+    if (ip2.toString().length >= 2)  {
+        b = true;
+    } else {
+        b = true;
+    } 
+    if (ip3.toString().length >= 2 )  {
+        c = true;
+    } else {
+        c = false;
+    }
+    if (ip4.toString().length >= 2 )  {
+        d = true;
+    } else {
+        d = false;
+    }
+    if (a && b && c && d) {
+        ip = ip1 + "." + ip2 + "." + ip3 + "." + ip4
+        return ip
+    } else {
+        return "Wrong Ip, please use correct format"
+
+    } 
+}
+
+let deflautHide = () => {
+    $('#ipField1').hide();
+    $('#ipField2').hide();
+    $('#ipField3').hide();
+    $('#ipField4').hide();
+    $('#but2').hide();
+}
+
+let deflautShow = () => {
+    $('#ipField1').show();
+    $('#ipField2').show();
+    $('#ipField3').show();
+    $('#ipField4').show();
+    $('#but2').show();
+}
+
+
+
+$(document).ready(function () {
+    deflautHide();
+    console.log("działa ?")
+    if (checkHide) {
+        subToShow = $('#submitToShowList').text(showHid.showPing)
+        document.getElementById('submitToShowList').onclick = () =>{
+            showing = deflautShow()
+            subToShow = $('#submitToShowList').text(showHid.hidePing)
+            return a = true;
+        }
+    } else {
+        return a = false;
+    }
+        if (a) {
+            pingButtonShow()
+            let ip2 = collectIp();
+            function myFunction2 () {
+                document.getElementById('submitToShowList').onclick = () =>{
+                    if (ip2) {
+                        $('#but2').text(`Press button to ping this IP : ${ip2}`);      
+                    } else {
+                        return 'some error'
+                    }
+                }
+            }
+        }    
+    }   
+})
+
+
+//////////////// add patern to ipFields
+pattern="[0-9]" minlength="2" maxlength="3"/>
+///////////////////////////
+
+
+let ip;
+    let a,b,c,d;
+    let ip1 = parseInt(document.getElementById('ipField1').value);
+    let ip2 = parseInt(document.getElementById('ipField2').value);
+    let ip3 = parseInt(document.getElementById('ipField3').value);
+    let ip4 = parseInt(document.getElementById('ipField4').value);
+    if (ip1.toString().length>= 2 ) {
+        a = true;
+    } else {
+        a = false;
+    }
+    if (ip2.toString().length >= 2)  {
+        b = true;
+    } else {
+        b = true;
+    } 
+    if (ip3.toString().length >= 2 )  {
+        c = true;
+    } else {
+        c = false;
+    }
+    if (ip4.toString().length >= 2 )  {
+        d = true;
+    } else {
+        d = false;
+    }
+    if (a && b && c && d) {
+        ip = ip1 + "." + ip2 + "." + ip3 + "." + ip4
+        let divIp = document.createElement('div')
+        divIp.createTextNode(`you are pinging this ip: ${ip}`)   
+        eventTarget.appendChild(divIp)
+         
+    } else {
+        let divIp = document.createElement('div')
+        divIp.createTextNode("Wrong Ip, please use correct format")
+        eventTarget.appendChild(divIp)
+    } 
